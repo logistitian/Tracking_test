@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Delivery Request</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="loading_country">Loading Country:</label>
+    <input type="text" name="loading_country" required>
+    <label for="loading_po_code">Loading PO Code:</label>
+    <input type="text" name="loading_po_code" required>
+    <label for="requested_loading_date">Requested Loading Date:</label>
+    <input type="date" name="requested_loading_date" required>
+    <label for="delivery_country">Delivery Country:</label>
+    <input type="text" name="delivery_country" required>
+    <label for="delivery_po_code">Delivery PO Code:</label>
+    <input type="text" name="delivery_po_code" required>
+    <label for="delivery_date">Delivery Date:</label>
+    <input type="date" name="delivery_date" required>
+    <label for="ftl_ltl">FTL/LTL:</label>
+    <input type="text" name="ftl_ltl" required>
+    <label for="company_name">Company Name/PIC Name:</label>
+    <input type="text" name="company_name" required>
+    <label for="phone_number">Phone Number:</label>
+    <input type="text" name="phone_number" required>
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

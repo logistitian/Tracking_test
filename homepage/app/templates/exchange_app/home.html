@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Our Trucks</h1>
+    <div class="row">
+        {% for truck in trucks %}
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{{ truck.image.url }}" alt="{{ truck.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ truck.name }}</h5>
+                    <p class="card-text">{{ truck.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
